@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #474841;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 630px;
+}
+
+.keyCase {
+  position: absolute;
+  left: 0;
+}
+
+.led-image {
+  z-index: 1;
+}
+
+.bg-image {
+  z-index: -1;
+  width: 100%;
+}
+
+.controls {
+  margin-top: 1.5em;
+  background-color: #333;
+  padding: 1em 2em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5em;
+}
+
+.category-heading {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.category-button {
+  padding: 0.3em 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.beige {
+  background-color: #dadcc0;
+}
+
+.azure {
+  background-color: #28548b;
+  color: white;
+}
+
+.breadbin-brown {
+  background-color: #9e8e70;
+}
+
+.breadbin-grey {
+  background-color: #9d9382;
+}
+
+.byte-white {
+  background-color: #dae7d7;
+}
+
+.crystal {
+  background-color: #27251e;
+  color: white;
+}
+
+.neon-green {
+  background-color: #51a339;
+}
+
+.plus4-black {
+  background-color: #262925;
+  color: #fff;
+}
+
+.ultra-violet {
+  background-color: #6c5f8b;
+}
+
+.aldi {
+  background-color: #e3e7cc;
+}
+
+.breadbin {
+  background-color: #221811;
+  color: #fff;
+}
+
+.black {
+  background-color: black;
+  color: #fff;
+}
+
+.dark-grey {
+  background-color: #656a5e;
+  color: #fff;
+}
+
+.light-blue {
+  background-color: #68aedf;
+}
+
+.light-grey {
+  background-color: #bdc5b3;
+}
+
+.medium-grey {
+  background-color: #abb6ac;
+}
+
+.neon-green {
+  background-color: #52b252;
+}
+
+.neon-pink {
+  background-color: #b04ba4;
+}
+
+.neon-yellow {
+  background-color: #c3d955;
+}
+
+.orange {
+  background-color: #a2845a;
+}
+
+.trans-black {
+  background-color: #090907;
+  color: #fff;
+}
+
+.trans-blue {
+  background-color: #061348;
+  color: #fff;
+}
+
+.trans-red {
+  background-color: #6a0c09;
+  color: #fff;
+}
+
+.aluminium {
+  background-color: #909990;
+}
+
+.retro-red {
+  background-color: #b93332;
+}
+
+.sx-silver {
+  background-color: #666d66;
+  color: #fff;
+}
+
+.green {
+  background-color: #5db16b;
+}
+
+.red {
+  background-color: #971711;
+}
+
+.blue {
+  background-color: #152e95;
+  color: #fff;
+}

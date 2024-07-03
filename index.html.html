@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyCap Color Explorer </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img class="keyCase bg-image" src="/DAN Renderings/Background/0_Background.png" /> -->
+        <img class="keyCase case-image" src="./DAN Renderings/Case/Case_Beige.png" />
+        <img class="keyCase keyboard-image" src="./DAN Renderings/Keyboard/Keyboard_Aldi.png">
+        <img class="keyCase led-image" src="./DAN Renderings/LED/LED_Blue.png">
+        <img class="keyCase badge-image" src="./DAN Renderings/Badge/Badge_Beige.png">
+        <img class="keyCase bracket-image" src="./DAN Renderings/Bracket/Bracket_Azure.png">
+    </div>
+    <div class="controls">
+        <div>
+            <p class="category-heading">Case</p>
+            <div class="buttons-container">
+                <button class="category-button">Beige</button>
+                <button class="category-button">Azure</button>
+                <button class="category-button">Breadbin Brown</button>
+                <button class="category-button">Breadbin Grey</button>
+
+                <button class="category-button">Byte White</button>
+                <button class="category-button">Crystal</button>
+                <button class="category-button">Neon Green</button>
+                <button class="category-button">Plus4 Black</button>
+
+                <button class="category-button">Retro Red</button>
+                <button class="category-button">SX Silver</button>
+                <button class="category-button">Ultra Violet</button>
+            </div>
+        </div>
+        <div>
+            <p class="category-heading">Keyboard</p>
+            <div class="buttons-container">
+                <button class="category-button">Aldi</button>
+                <button class="category-button">Breadbin</button>
+                <button class="category-button">Black</button>
+                <button class="category-button">Clear</button>
+
+                <button class="category-button">Dark Grey</button>
+                <button class="category-button">Light Blue</button>
+                <button class="category-button">Light Grey</button>
+                <button class="category-button">Medium Grey</button>
+
+                <button class="category-button">Neon Green</button>
+                <button class="category-button">Neon Pink</button>
+                <button class="category-button">Neon Yellow</button>
+                <button class="category-button">Orange</button>
+
+                <button class="category-button">Trans Black</button>
+                <button class="category-button">Trans Blue</button>
+                <button class="category-button">Trans Red</button>
+                <button class="category-button">White</button>
+            </div>
+        </div>
+        <div>
+            <p class="category-heading">Bracket</p>
+            <div class="buttons-container">
+                <button class="category-button">Azure</button>
+                <button class="category-button">Aluminium</button>
+                <button class="category-button">Byte White</button>
+                <button class="category-button">Crystal</button>
+
+                <button class="category-button">Neon Green</button>
+                <button class="category-button">Black</button>
+                <button class="category-button">Retro Red</button>
+                <button class="category-button">SX Silver</button>
+                <button class="category-button">Ultra Violet</button>
+            </div>
+        </div>
+        <div>
+            <p class="category-heading">Badge</p>
+            <div class="buttons-container">
+                <button class="category-button">Beige</button>
+                <button class="category-button">Black</button>
+                <button class="category-button">Blue</button>
+                <button class="category-button">Green</button>
+                <button class="category-button">Red</button>
+                <button class="category-button">Violet</button>
+            </div>
+        </div>
+        <div>
+            <p class="category-heading">LED</p>
+            <div class="buttons-container">
+                <button class="category-button">Blue</button>
+                <button class="category-button">Green</button>
+                <button class="category-button">Red</button>
+                <button class="category-button">White</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.category-button')
+        buttons.forEach(btn => {
+
+            const colorClass = btn.textContent.trim().toLowerCase().replace(/\s+/g, '-')
+            btn.classList.add(colorClass)
+            btn.addEventListener('click', () => {
+
+                const category = btn.parentElement.previousElementSibling.textContent.trim()
+                console.log(category)
+                const buttonText = btn.textContent.trim()
+                getRelaventCategoryImage(category, buttonText)
+            })
+        })
+
+        function getRelaventCategoryImage(category, buttonText) {
+            const imagePath = `./DAN Renderings/${category}/${category}_${buttonText}.png`
+            const caseImage = document.querySelector('.case-image')
+            const keyboardImage = document.querySelector('.keyboard-image')
+            const bracketImage = document.querySelector('.bracket-image')
+            const ledImage = document.querySelector('.led-image')
+            const badgeImage = document.querySelector('.badge-image')
+            if (category == 'Case') {
+                caseImage.src = imagePath
+            } else if (category == 'Keyboard') {
+                keyboardImage.src = imagePath
+            } else if (category == 'Bracket') {
+                bracketImage.src = imagePath
+            } else if (category == 'LED') {
+                ledImage.src = imagePath
+            } else if (category == 'Badge') {
+                badgeImage.src = imagePath
+            }
+        }
+    </script>
+</body>
+
+</html>
